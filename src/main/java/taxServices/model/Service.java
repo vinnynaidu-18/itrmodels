@@ -3,20 +3,19 @@ package taxServices.model;
 public class Service {
     // Calculate tax based on income alone
         public double calculateTax(User user) {
-            if (user.getIncome() <= 500000) {
-                return user.getIncome() * 0.05;
-            } else if (user.getIncome() <= 1000000) {
-                return 25000 + (user.getIncome() - 500000) * 0.2;
+            if (user.income <= 500000) {
+                return user.income * 0.05;
+            } else if (user.income <= 1000000) {
+                return 25000 + (user.income - 500000) * 0.2;
             } else {
-                return 125000 + (user.getIncome() - 1000000) * 0.3;
+                return 125000 + (user.income - 1000000) * 0.3;
             }
         }
-
         // Overloaded method to include business income
         public double calculateTax(User user, boolean includeBusinessIncome) {
             double tax = calculateTax(user);
-            if (includeBusinessIncome && user.isBusinessIncome()) {
-               tax += user.getIncome() * 0.15;
+            if (includeBusinessIncome && user.businessIncome) {
+               tax += user.income * 0.15;
             }
             return tax;
         }

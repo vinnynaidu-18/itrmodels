@@ -16,30 +16,6 @@ public  class User {
         this.businessIncome = businessIncome;
         this.otherIncome = otherIncome;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public double getIncome() {
-        return income;
-    }
-
-    public boolean isBusinessIncome() {
-        return businessIncome;
-    }
-
-    public double getOtherIncome() {
-        return otherIncome;
-    }
 }
 
 
